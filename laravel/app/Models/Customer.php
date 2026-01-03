@@ -3,15 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Meal;
 
 class Customer extends Model
 {
-    public function meals()
-    {
-        return $this->hasMany(Meal::class);
-    }
+    use HasFactory;
+    //protected $fillable = ['name', 'surname', '..', '..'];
+    protected $guarded = ['id'];
 
-    function activities() {
-        return $this->hasMany(Activity::class);
+    public function meals() {
+        return $this->hasMany(Meal::class);   //Customerın 1 den fazla meal ı var
     }
 }

@@ -12,7 +12,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-        //
+        dd(Food::all());
     }
 
     /**
@@ -20,7 +20,17 @@ class FoodController extends Controller
      */
     public function create()
     {
-        //
+        Food::create([
+            'name' => 'Grilled Chicken',
+            'major' => 'protein',
+            'calori' => 250
+        ]);
+        
+        Food::create([
+            'name' => 'Banana',
+            'major' => 'Carbonhydrate',
+            'calori' => 90
+        ]);
     }
 
     /**

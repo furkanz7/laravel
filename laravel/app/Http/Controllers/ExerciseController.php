@@ -12,7 +12,7 @@ class ExerciseController extends Controller
      */
     public function index()
     {
-        //
+        dd(Exercise::all());   //  dd ekrana bastırır
     }
 
     /**
@@ -20,7 +20,19 @@ class ExerciseController extends Controller
      */
     public function create()
     {
-        //
+        Exercise::create([
+            'name' => 'Running',
+            'type' => 'Cardio',
+            'unit' => 'minute',
+            'calori' => 12
+        ]);
+        
+        Exercise::create([
+            'name' => 'Push-up',
+            'type' => 'Strength',
+            'unit' => 'count',
+            'calori' => 1
+        ]);
     }
 
     /**

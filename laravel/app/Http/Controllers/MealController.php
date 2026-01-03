@@ -12,7 +12,7 @@ class MealController extends Controller
      */
     public function index()
     {
-        //
+        return view('meals.example');
     }
 
     /**
@@ -20,7 +20,7 @@ class MealController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
